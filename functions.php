@@ -1,7 +1,7 @@
 <?php
 	
 function connect() {
-	$con = mysql_connect($_ENV['database-hostname'],$_ENV['database-username'],$_ENV['database-password']);
+	$con = mysql_connect($_ENV['database-hostname'],$_ENV['database-user'],$_ENV['database-password']);
 	if (!$con) {
 		// Error message if connection fails
 		die('Could not connect: ' . mysql_error());
