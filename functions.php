@@ -1,12 +1,12 @@
 <?php
 	
 function connect() {
-	$con = mysql_connect($_ENV['db_hostname'],$_ENV['db_username'],$_ENV['db_password']);
+	$con = mysql_connect($_ENV['database-hostname'],$_ENV['database-username'],$_ENV['database-password']);
 	if (!$con) {
 		// Error message if connection fails
 		die('Could not connect: ' . mysql_error());
 	}
-	mysql_select_db("attendees", $con);
+	mysql_select_db($_ENV['database-name'], $con);
 	return $con;
 }
 
