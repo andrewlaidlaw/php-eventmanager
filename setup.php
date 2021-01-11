@@ -12,7 +12,7 @@ while (!feof($file))
 	echo "<br />";
 	$linearray = explode(",",$line);
 	$query = "INSERT INTO attendees (fname,lname,type,company,jobrole) VALUES ('" . $linearray[3] . "', '" . $linearray[4] . "', '" . $linearray[0] . "', '" . $linearray[2] . "', '" . $linearray[5] . "')";
-	$result = mysqli_query($query, $con);
+	$result = mysqli_query($con, $query);
 	}
 
 disconnect($con);

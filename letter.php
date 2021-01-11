@@ -7,9 +7,9 @@ $letter = $_REQUEST['submit'];
 $con=connect();
 
 $query1 = "SELECT id, fname, lname FROM attendees WHERE fname LIKE '" . $letter . "%' ORDER BY fname";
-$result1 = mysqli_query($query1, $con);
+$result1 = mysqli_query($con, $query1);
 $query2 = "SELECT id, fname, lname FROM attendees WHERE lname LIKE '" . $letter . "%' ORDER BY lname";
-$result2 = mysqli_query($query2, $con);
+$result2 = mysqli_query($con, $query2);
 
 disconnect($con);
 
