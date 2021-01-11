@@ -1,18 +1,19 @@
 <?php
 	
 function connect() {
-	$con = mysql_connect($_ENV['database-hostname'],$_ENV['database-user'],$_ENV['database-password']);
+	$con = mysqli_connect($_ENV['database-hostname'],
+		$_ENV['database-user'],$_ENV['database-password'],$_ENV['database-name']);
 	if (!$con) {
 		// Error message if connection fails
-		die('Could not connect: ' . mysql_error());
+		die('Could not connect: ' . mysqli_connect_error());
 	}
-	mysql_select_db($_ENV['database-name'], $con);
+
 	return $con;
 }
 
 // Disconnect from Database
 function disconnect($con) {
-	mysql_close($con);
+	mysqli_close($con);
 	}
 	
 // Remove html code from input	
@@ -27,5 +28,5 @@ function mysql_fix_string($string) {
 	if (get_magic_quotes_gpc()) {
 		$string = stripslashes($string);
 	}
-	return mysql_real_escape_string($string);
+	return mysqli_real_escape_string($string);
 }
