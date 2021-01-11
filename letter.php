@@ -7,9 +7,9 @@ $letter = $_REQUEST['submit'];
 $con=connect();
 
 $query1 = "SELECT id, fname, lname FROM attendees WHERE fname LIKE '" . $letter . "%' ORDER BY fname";
-$result1 = mysql_query($query1, $con);
+$result1 = mysqli_query($query1, $con);
 $query2 = "SELECT id, fname, lname FROM attendees WHERE lname LIKE '" . $letter . "%' ORDER BY lname";
-$result2 = mysql_query($query2, $con);
+$result2 = mysqli_query($query2, $con);
 
 disconnect($con);
 
@@ -27,7 +27,7 @@ Attendees (" . $letter . ")<br />
 <table>
 ";
 
-if (mysql_num_rows($result1)==0)
+if (mysqli_num_rows($result1)==0)
 	{
 	
 	}
@@ -35,7 +35,7 @@ else
 	{
 	echo "<tr><th>By First Name</th><th>&nbsp;</th></tr>
 	";
-	while ($row = mysql_fetch_array($result1))
+	while ($row = mysqli_fetch_array($result1))
 		{
 		$id = $row['id'];
 		echo "
@@ -44,7 +44,7 @@ else
 		}
 	}
 
-if (mysql_num_rows($result2)==0)
+if (mysqli_num_rows($result2)==0)
 	{
 	
 	}
@@ -52,7 +52,7 @@ else
 	{
 	echo "<tr><th>By Last Name</th><th>&nbsp;</th></tr>
 	";
-	while ($row = mysql_fetch_array($result2))
+	while ($row = mysqli_fetch_array($result2))
 		{
 		$id = $row['id'];
 		echo "

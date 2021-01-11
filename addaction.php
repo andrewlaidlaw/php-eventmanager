@@ -11,7 +11,7 @@ $type = $_REQUEST['type'];
 $con=connect();
 
 $query = "INSERT INTO attendees (fname, lname, jobrole, company, type, attend) VALUES ('" . $fname . "', '" . $lname . "', '" . $jobrole . "', '" . $company . "', '" . $type . "', 1)";
-$result = mysql_query($query, $con);
+$result = mysqli_query($query, $con);
 
 disconnect($con);
 

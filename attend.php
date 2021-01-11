@@ -7,7 +7,7 @@ $id = $_REQUEST['id'];
 $con=connect();
 
 $query = "UPDATE attendees SET attend=1 WHERE id=" . $id;
-$result = mysql_query($query, $con);
+$result = mysqli_query($query, $con);
 
 disconnect($con);
 

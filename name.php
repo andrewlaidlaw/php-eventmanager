@@ -7,8 +7,8 @@ $id = $_REQUEST['name'];
 $con=connect();
 
 $query = "SELECT * FROM attendees WHERE id=" . $id;
-$result = mysql_query($query, $con);
-$row = mysql_fetch_array($result);
+$result = mysqli_query($query, $con);
+$row = mysqli_fetch_array($result);
 
 disconnect($con);
 
