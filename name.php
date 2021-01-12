@@ -53,8 +53,8 @@ echo $row['jobrole'];
 
 if ($type > 1)
 	{
-	echo "<br />
-	at " . $row['company'];
+	echo " at <b>" . $row['company'] . "</b>
+	";
 	}
 
 if ($type == 1)

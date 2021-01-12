@@ -14,7 +14,8 @@ button
 {
 font-size:1.5em;
 padding: 10px;
-width: 40px;
+min-width: 60px;
+text-align: center;
 background-color: darkblue;
 color: white;
 }
@@ -34,7 +35,7 @@ padding:5px;
 background-color:darkred;
 color:white;
 font-weight:bold;
-padding:5px;
+padding:15px;
 }
 
 #bp
@@ -42,7 +43,7 @@ padding:5px;
 background-color:darkblue;
 color:white;
 font-weight:bold;
-padding:5px;
+padding:15px;
 }
 
 #customer
@@ -50,11 +51,11 @@ padding:5px;
 background-color:darkgreen;
 color:white;
 font-weight:bold;
-padding:5px;
+padding:15px;
 }
 
 #warning
 {
 background-color:red;
-padding:5px;
+padding:15px;
 }

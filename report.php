@@ -18,12 +18,12 @@ $executives = mysqli_num_rows($result3);
 
 $query4 = "SELECT id FROM attendees WHERE type=1 AND attend=1";
 $result4 = mysqli_query($con, $query4);
-$ibmers = mysqli_num_rows($result4);
+$employees = mysqli_num_rows($result4);
 
 disconnect($con);
 
 $subtotal = $customers + $bps + $executives;
-$total = $subtotal + $ibmers;
+$total = $subtotal + $employees;
 
 echo "
 <html>
@@ -39,7 +39,7 @@ echo "
 <tr><td>Business Partners:</td><td>" . $bps . "</td></tr>
 <tr><td>Executives:</td><td>" . $executives . "</td></tr>
 <tr><td><b>Subtotal</b>:</td><td>" . $subtotal . "</td></tr>
-<tr><td>IBMers:</td><td>" . $ibmers . "</td></tr>
+<tr><td>Employees:</td><td>" . $employees . "</td></tr>
 <tr><td><b>Total</b>:</td><td>" . $total . "</td></tr>
 </table>
 
