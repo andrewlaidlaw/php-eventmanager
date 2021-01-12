@@ -31,11 +31,11 @@ $type = $row['type'];
 
 if ($type == 1)
 	{
-	echo "IBMer";
+	echo "Employee";
 	}
 if ($type == 2)
 	{
-	echo "<span id='executive'>IBM Executive</span>";
+	echo "<span id='executive'>Executive</span>";
 	}
 if ($type == 3)
 	{

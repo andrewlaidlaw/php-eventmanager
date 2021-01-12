@@ -44,7 +44,8 @@ echo "
 <div id='links'>
 <a href='agenda.php'>Agenda</a><br />
 <a href='details.php'>Venue details</a><br />
-<a href='report.php'>Report</a>
+<a href='report.php'>Report</a><br /><br />
+<a href='setup.php'>Setup/Reset Database</a>
 </div>
 </body>
 </html>
