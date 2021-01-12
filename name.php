@@ -24,7 +24,7 @@ echo "
 <form name='hosting' method='get' action='attend.php'>
 
 <div id='details'>
-" . $row['fname'] . " " . $row['lname'] . "<br />
+" . $row['fname'] . " " . $row['lname'] . "<br /><br />
 ";
 
 $type = $row['type'];
@@ -46,7 +46,7 @@ if ($type == 4)
 	echo "<span id='customer'>Customer</span>";
 	}
 
-echo "<br />
+echo "<br /><br />
 ";
 
 echo $row['jobrole'];
